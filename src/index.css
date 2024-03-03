@@ -1,13 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-body {
-  background: linear-gradient(
-    21deg,
-    rgba(2, 8, 14, 1) 0%,
-    rgba(2, 16, 32, 0.3) 144%
-  );
-}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
