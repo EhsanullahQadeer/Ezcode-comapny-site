@@ -1,12 +1,12 @@
-import React,{ useEffect, useMemo, useState }  from "react";
-import bg from "./assets/images/global/banner_back_illustration.png"
+import React, { useEffect, useMemo, useState } from "react";
+import bg from "./assets/images/global/banner_back_illustration.png";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 // import { loadAll } from "@tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
 // import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
 // import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
 
-const Wrapper = () => {
+const Particles = () => {
   const [init, setInit] = useState(false);
 
   // this should be run only once per application lifetime
@@ -30,7 +30,6 @@ const Wrapper = () => {
 
   const options = useMemo(
     () => ({
-
       fpsLimit: 120,
       interactivity: {
         events: {
@@ -92,25 +91,25 @@ const Wrapper = () => {
       },
       detectRetina: true,
     }),
-    [],
+    []
   );
 
   return (
     <div
       style={{
         height: "300svh",
-        background:`url(${bg})`
+        background: `url(${bg})`,
       }}
     >
       <div style={{}}>
         <Particles
-        id="tsparticles"
-        particlesLoaded={particlesLoaded}
-        options={options}
-      />
+          id="tsparticles"
+          particlesLoaded={particlesLoaded}
+          options={options}
+        />
       </div>
     </div>
   );
 };
 
-export default Wrapper;
+export default Particles;

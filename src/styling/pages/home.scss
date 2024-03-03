@@ -1,0 +1,114 @@
+.home-parent-wrapper {
+  .hero-section {
+    background: url("../../assets/images/global/banner_back_illustration.png");
+    background-repeat: no-repeat;
+
+    .gradient-color {
+      background: transparent
+        linear-gradient(
+          135deg,
+          #ff39a7 0,
+          #e265af 16%,
+          #9f5de6 33%,
+          #655be2 50%,
+          #9f5de6 67%,
+          #e265af 84%,
+          #ff39a7 100%
+        );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-right {
+      border-radius: 50px;
+      box-shadow: 0 0 24px;
+      position: relative;
+      // height: 300px;
+      // width: 534px
+    }
+
+    .gradient-border1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 230px;
+      height: 67px;
+      border-radius: 50px;
+      color: #fff;
+      cursor: pointer !important;
+      background: linear-gradient(180deg, #968ee9 0, #746bd8 100%);
+    }
+
+    .joinnow-div {
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1.5rem;
+      font-size: 22px;
+      justify-content: center;
+      align-items: center;
+      button {
+        background: linear-gradient(black, black) padding-box,
+          linear-gradient(
+            360deg,
+            #FF39A7 0%,
+            #FF39A7 26%,
+            #a322de 86%,
+            #6bdef8 100%
+          );
+        border-radius: 50em;
+        border: 4px solid transparent;
+        color: white;
+        padding: 1rem 4.5rem;
+        cursor: pointer;
+      }
+    }
+
+    .box {
+      --border-size: 4px;
+      --border-radius: 50px;
+      --border-angle: 0turn;
+      width: 242px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 23px;
+      font-weight: 600;
+      height: 75px;
+      background-image: conic-gradient(
+          from var(--border-angle),
+          #213,
+          #112 50%,
+          #213
+        ),
+        conic-gradient(
+          from var(--border-angle),
+          transparent 20%,
+          #b827dc,
+          #6bdef8
+        );
+      background-size: calc(100% - (var(--border-radius) * 2))
+          calc(100% - (var(--border-size) * 2)),
+        cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      border-radius: 50px;
+      animation: bg-spin 3s linear infinite;
+      @keyframes bg-spin {
+        to {
+          --border-angle: 1turn;
+        }
+      }
+
+      &:hover {
+        animation-play-state: paused;
+      }
+    }
+  }
+}
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}

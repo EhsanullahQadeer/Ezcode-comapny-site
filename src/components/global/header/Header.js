@@ -24,7 +24,7 @@ export const Header = () => {
 
   return (
     <nav
-      className={`sm:px-16 px-6 w-full flex items-center py-5 fixed top-0 z-20 text-primary hover:text-primary-900 bg-transparent  ${
+      className={`container mx-auto sm:px-16 px-6 w-full flex items-center py-5 fixed left-1/2 -translate-x-1/2 top-0 z-20 text-primary hover:text-primary-900 bg-transparent  ${
         scrolled ? "main-header  shadow-md" : "backdrop-blur-10 "
       }`}
     >

@@ -1,19 +1,13 @@
 import React from "react";
-import { Route, Routes, BrowserRouter } from "react-router-dom";
-import Wrapper from "../Wrapper";
+import { Route, Routes } from "react-router-dom";
+import { Home } from "../pages/Home.js";
 const AllRoutes = () => {
   return (
-    <BrowserRouter>
-      <React.Suspense>
-        <Routes>
-          <Route path={``} element={<Wrapper />}>
-            <Route>
-              {/* <Route index path="/" element={<Dashboard />} /> */}
-            </Route>
-          </Route>
-        </Routes>
-      </React.Suspense>
-    </BrowserRouter>
+    <React.Suspense>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </React.Suspense>
   );
 };
 export default AllRoutes;
