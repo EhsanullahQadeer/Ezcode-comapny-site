@@ -10,8 +10,8 @@ export const HeroSection = () => {
   return (
     <>
       <div className="hero-section h-svh w-full">
-        <div className="container mx-auto sm:px-16 px-6 pt-36">
-          <div className="flex flex-row justify-between items-center gap-12">
+        <div className="container mx-auto sm:px-16 px-6 pt-20">
+          <div className="flex flex-row justify-between items-center gap-12 py-12">
             <div className="flex-1">
               <div className="min-h-48">
                 <h1 className="text-navy-blue text-32 font-bold inline">
@@ -31,7 +31,32 @@ export const HeroSection = () => {
                 </div>
               </div>
             </div>
-            <div className="hero-right flex-1 bg-white border-1 border-white shadow-light-purple"></div>
+            <div className="hero-right flex-1 bg-white border-1 border-white shadow-light-purple">
+              <div className="video-section h-80">
+                <video
+                  width="100%"
+                  autoPlay={true}
+                  muted
+                  loop
+                  className="h-full object-cover object-center"
+                >
+                  <source
+                    src="https://github.githubassets.com/assets/globe-900.h264-975e7b5ac572.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <div className="hero-trusted-wrap flex flex-row items-center">
+            <span className="whitespace-nowrap text-primary px-3 text-16">
+              Trusted by <span className="text-navy-blue font-bold">75+</span>{" "}
+              users, <span className="text-navy-blue font-bold">46</span>{" "}
+              managed projects and{" "}
+              <span className="text-navy-blue font-bold">$100M+</span> increse
+              in revenue
+            </span>
           </div>
         </div>
       </div>
