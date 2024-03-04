@@ -9,7 +9,7 @@ export const HeroSection = () => {
     <>
       <div className="hero-section h-svh w-full">
         <div className="container mx-auto sm:px-16 px-6 pt-20">
-          <div className="flex flex-col xl:flex-row justify-between items-center gap-12 py-16">
+          <div className="flex flex-col xl:flex-row justify-between items-center gap-12 py-14">
             <div className="flex-1">
               <div className="hero-content lg:max-xl:min-h-40 xl:min-h-48 text-center md:text-start">
                 <h1 className="text-navy-blue sm:text-32 text-27 font-bold inline">
