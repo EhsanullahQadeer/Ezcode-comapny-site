@@ -30,7 +30,7 @@
     top: -10px;
     right: 0;
     bottom: 0;
-    background: rgb(225,180,252,0.7);
+    background: rgb(225, 180, 252, 0.7);
     padding-top: 35px;
     padding-left: 20px;
     width: 250px;
@@ -72,13 +72,13 @@
 .nav-link {
   position: relative;
 }
-.nav-link::after{
+.nav-link::after {
   content: "";
   position: absolute;
   bottom: -2px;
   height: 3px;
   width: 0;
-  background-color: #FF39A7;
+  background-color: #d97dd9;
   left: 0;
   border-radius: 10px;
   transition: width 0.3s ease-out;

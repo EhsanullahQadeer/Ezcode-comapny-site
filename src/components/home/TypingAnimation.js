@@ -12,7 +12,7 @@ export const TypingAnimation = () => {
       wrapper="span"
       speed={50}
       repeat={Infinity}
-      className="text-navy-blue text-32 font-bold"
+      className="text-navy-blue sm:text-32 text-27 font-bold"
     />
   );
 };
