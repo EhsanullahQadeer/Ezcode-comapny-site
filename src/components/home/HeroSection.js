@@ -11,9 +11,9 @@ export const HeroSection = () => {
     <>
       <div className="hero-section h-svh w-full">
         <div className="container mx-auto sm:px-16 px-6 pt-20">
-          <div className="flex flex-row justify-between items-center gap-12 py-12">
+          <div className="flex flex-row justify-between items-center gap-12 py-16">
             <div className="flex-1">
-              <div className="min-h-48">
+              <div className="hero-content min-h-48 ">
                 <h1 className="text-navy-blue text-32 font-bold inline">
                   We <span className="gradient-color">empower businesses</span>{" "}
                   by{" "}
@@ -32,13 +32,13 @@ export const HeroSection = () => {
               </div>
             </div>
             <div className="hero-right flex-1 bg-white border-1 border-white shadow-light-purple">
-              <div className="video-section h-80">
+              <div className="video-section bg-navy-blue2">
                 <video
                   width="100%"
                   autoPlay={true}
                   muted
                   loop
-                  className="h-full object-cover object-center"
+                  className="h-full object-contain object-center"
                 >
                   <source
                     src="https://github.githubassets.com/assets/globe-900.h264-975e7b5ac572.mp4"

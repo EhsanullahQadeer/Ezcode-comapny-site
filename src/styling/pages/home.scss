@@ -20,12 +20,14 @@
       -webkit-text-fill-color: transparent;
     }
 
+    .hero-content {
+        max-width: 550px;
+    }
+
     .hero-right {
       border-radius: 50px;
       box-shadow: 0 0 24px;
       position: relative;
-      height: 400px;
-      width: 100%;
 
       &::before {
         background: linear-gradient(
@@ -48,13 +50,13 @@
       }
 
       .video-section {
-        background-color: #fff;
         border-radius: 20px;
         box-shadow: 3px 6px 12px #252e481a;
         margin: 40px;
         overflow: hidden;
         position: relative;
         z-index: 1;
+        aspect-ratio: 2/1.2;
       }
     }
 

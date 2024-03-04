@@ -28,7 +28,7 @@ export const Header = () => {
         scrolled ? "main-header  shadow-md" : "backdrop-blur-10 "
       }`}
     >
-      <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
+      <div className="w-full flex justify-between items-center mx-auto">
         <Link
           to="/"
           className="flex items-center gap-2"

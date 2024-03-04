@@ -11,6 +11,7 @@ module.exports = {
         "medium-pink": "#da9cf7",
         "light-pink": "#e1b4fc",
         "navy-blue": "#252E48",
+        "navy-blue2": "#050d1f"
       },
       fontSize: {
         // Define fontSizes here
