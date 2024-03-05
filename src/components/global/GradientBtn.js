@@ -1,7 +1,7 @@
 import Aos from "aos";
 import React, { useEffect } from "react";
 
-export const ContactUsBtn = () => {
+export const GradientBtn = () => {
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);

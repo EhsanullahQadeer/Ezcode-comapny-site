@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="150" height="170" viewBox="0 0 150 170">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_21793" data-name="Rectangle 21793" width="150" height="170" transform="translate(286 2477)" fill="none"/>
+    </clipPath>
+    <radialGradient id="radial-gradient" cx="0.351" cy="0.294" r="0.526" gradientTransform="matrix(0.716, 0.698, 0.673, -0.691, -0.098, 0.252)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#9af0d9"/>
+      <stop offset="0.478" stop-color="#3ee6b8"/>
+      <stop offset="1" stop-color="#24caa9"/>
+    </radialGradient>
+    <filter id="Path_25002" x="6.942" y="-2.182" width="96.154" height="124.074" filterUnits="userSpaceOnUse">
+      <feOffset dx="3" dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#fff" flood-opacity="0.557" result="color"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur"/>
+      <feComposite operator="in" in="color"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+    <radialGradient id="radial-gradient-2" cx="0.649" cy="0.706" r="0.526" gradientTransform="matrix(-0.716, -0.698, -0.673, 0.691, 1.589, 0.672)" xlink:href="#radial-gradient"/>
+    <filter id="Path_25003" x="54.361" y="106.641" width="78.896" height="33.265" filterUnits="userSpaceOnUse">
+      <feOffset dx="3" dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-color="#fff" flood-opacity="0.557" result="color-2"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur-2"/>
+      <feComposite operator="in" in="color-2"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f06685"/>
+      <stop offset="1" stop-color="#f560b6"/>
+    </linearGradient>
+    <filter id="Illustration_purple_Circle" x="16.169" y="120.736" width="54.752" height="54.751" filterUnits="userSpaceOnUse">
+      <feOffset dx="2" dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur-3"/>
+      <feFlood flood-color="#fff" flood-opacity="0.502" result="color-3"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur-3"/>
+      <feComposite operator="in" in="color-3"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Illustration_Section_5_Right" data-name="Illustration_Section 5_Right" transform="translate(-286 -2477)" clip-path="url(#clip-path)">
+    <g id="Illustration_drops" transform="translate(1011.135 -1838.326) rotate(22)">
+      <g data-type="innerShadowGroup">
+        <path id="Path_25002-2" data-name="Path 25002" d="M41.029,89.559S60.617-6.857,14.769.389C4.269,2.966.189,11.871.006,22.554S3.925,40.867,12.73,50.349s11.818,16.433,15.581,32.5-3.477,34.619,2.367,33.944S41.029,89.559,41.029,89.559Z" transform="translate(1002.344 4246.903) rotate(7)" fill="url(#radial-gradient)"/>
+        <g transform="matrix(0.93, -0.37, 0.37, 0.93, 944.22, 4272.74)" filter="url(#Path_25002)">
+          <path id="Path_25002-3" data-name="Path 25002" d="M41.029,89.559S60.617-6.857,14.769.389C4.269,2.966.189,11.871.006,22.554S3.925,40.867,12.73,50.349s11.818,16.433,15.581,32.5-3.477,34.619,2.367,33.944S41.029,89.559,41.029,89.559Z" transform="matrix(0.87, 0.48, -0.48, 0.87, 63.57, -2.18)" fill="#fff"/>
+        </g>
+      </g>
+      <g data-type="innerShadowGroup">
+        <path id="Path_25003-2" data-name="Path 25003" d="M28.966,18.28S42.8,82.949,10.427,78.09C3.015,76.36.134,70.388,0,63.222S2.771,50.939,8.988,44.58s8.344-11.022,11-21.8S17.533-.44,21.659.012,28.966,18.28,28.966,18.28Z" transform="matrix(-0.358, -0.934, 0.934, -0.358, 1046.516, 4380.828)" fill="url(#radial-gradient-2)"/>
+        <g transform="matrix(0.93, -0.37, 0.37, 0.93, 944.22, 4272.74)" filter="url(#Path_25003)">
+          <path id="Path_25003-3" data-name="Path 25003" d="M28.966,18.28S42.8,82.949,10.427,78.09C3.015,76.36.134,70.388,0,63.222S2.771,50.939,8.988,44.58s8.344-11.022,11-21.8S17.533-.44,21.659.012,28.966,18.28,28.966,18.28Z" transform="matrix(0.02, -1, 1, 0.02, 54.36, 138.54)" fill="#fff"/>
+        </g>
+      </g>
+    </g>
+    <g data-type="innerShadowGroup">
+      <path id="Illustration_purple_Circle-2" data-name="Illustration_purple_Circle" d="M19.719,5.916a13.651,13.651,0,0,0-13.492,13.8,13.651,13.651,0,0,0,13.492,13.8,13.651,13.651,0,0,0,13.492-13.8,13.651,13.651,0,0,0-13.492-13.8m0-5.916A19.721,19.721,0,1,1,0,19.721,19.742,19.742,0,0,1,19.719,0Z" transform="translate(334.868 2597.736) rotate(56)" fill="url(#linear-gradient)"/>
+      <g transform="matrix(1, 0, 0, 1, 286, 2477)" filter="url(#Illustration_purple_Circle)">
+        <path id="Illustration_purple_Circle-3" data-name="Illustration_purple_Circle" d="M19.719,5.916a13.651,13.651,0,0,0-13.492,13.8,13.651,13.651,0,0,0,13.492,13.8,13.651,13.651,0,0,0,13.492-13.8,13.651,13.651,0,0,0-13.492-13.8m0-5.916A19.721,19.721,0,1,1,0,19.721,19.742,19.742,0,0,1,19.719,0Z" transform="translate(48.87 120.74) rotate(56)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

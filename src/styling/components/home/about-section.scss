@@ -1,0 +1,49 @@
+.about-section-parent-wrapper {
+  background: url("../../../assets/images/global/about-section-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+
+  .content-wrapper {
+    max-width: 700px;
+  }
+
+  .content-badges-img {
+    position: absolute;
+    transform: translateZ(0);
+    height: 170px;
+    width: 150px;
+    z-index: 1;
+
+    &.cube-icon-img {
+      left: -150px;
+      top: -90px;
+      animation: scale infinite 4.4s;
+    }
+
+    &.splash-icon-img {
+      right: -140px;
+      top: -100px;
+      animation: scale 2.8s infinite 0.4s;
+    }
+  }
+
+  @keyframes scale {
+    0%,
+    100% {
+      transform: translateZ(0) scale(1);
+    }
+    50% {
+      transform: translateZ(0) scale(1.08);
+    }
+  }
+
+  .about-badge {
+    position: relative;
+    cursor: default;
+    &:hover {
+    transition:transform 0.5s ease !important;
+      transform: translateY(-16px) !important;
+    }
+  }
+}

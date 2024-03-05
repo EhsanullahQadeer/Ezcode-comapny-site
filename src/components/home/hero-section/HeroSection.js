@@ -1,14 +1,14 @@
 import React from "react";
 import { TypingAnimation } from "./TypingAnimation";
-import envelopIconImg from "../../assets/images/home/illustration_header_left.svg";
-import playIconImg from "../../assets/images/home/illustration_header_right.svg";
-import { ContactUsBtn } from "./ContactUsBtn";
+import envelopIconImg from "../../../assets/images/home/illustration_header_left.svg";
+import playIconImg from "../../../assets/images/home/illustration_header_right.svg";
+import { GradientBtn } from "../../global/GradientBtn";
 
 export const HeroSection = () => {
   return (
     <>
-      <div className="hero-section h-svh w-full">
-        <div className="container mx-auto sm:px-16 px-6 pt-20">
+      <div className="hero-section w-full">
+        <div className="container mx-auto sm:px-16 px-6 pt-20 pb-6">
           <div className="flex flex-col xl:flex-row justify-between items-center gap-12 py-14">
             <div className="flex-1">
               <div className="hero-content lg:max-xl:min-h-40 xl:min-h-48 text-center md:text-start">
@@ -20,7 +20,7 @@ export const HeroSection = () => {
               </div>
 
               <div className="gradient-btn-wrapper hidden xl:block mt-16">
-                <ContactUsBtn />
+                <GradientBtn />
               </div>
             </div>
             <div className="hero-right flex-1 bg-white border-1 border-white shadow-light-purple relative">
@@ -42,19 +42,19 @@ export const HeroSection = () => {
               <img
                 src={playIconImg}
                 alt="play-icon-img"
-                className="play-icon-img hidden md:block"
+                className="play-icon-img hidden lg:block"
               />
 
               <img
                 src={envelopIconImg}
                 alt="envelop-icon-img"
-                className="envelop-icon-img hidden md:block"
+                className="envelop-icon-img hidden lg:block"
               />
             </div>
           </div>
 
           <div className="gradient-btn-wrapper xl:hidden flex justify-center mb-16 md:mt-16">
-            <ContactUsBtn />
+            <GradientBtn />
           </div>
 
           <div className="hero-trusted-wrap flex flex-row items-center">
