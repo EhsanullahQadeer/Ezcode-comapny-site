@@ -1,0 +1,21 @@
+.header-parent-wrapper {
+  .nav-link {
+    position: relative;
+  }
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    height: 3px;
+    width: 0;
+    background-color: #d97dd9;
+    left: 0;
+    border-radius: 10px;
+    transition: width 0.3s ease-out;
+  }
+  .nav-link:hover::after {
+    @media (min-width: 738px) {
+      width: 100%;
+    }
+  }
+}

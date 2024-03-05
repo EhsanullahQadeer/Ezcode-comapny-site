@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { navLinks } from "./global/header/navLinks";
+import { navLinks } from "./navLinks";
 
 const Links = (props) => {
   const { sm } = props;

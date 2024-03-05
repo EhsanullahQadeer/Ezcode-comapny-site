@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import logo from "../../../assets/icons/global/logo.png";
 import { Link } from "react-router-dom";
 import Sidebar from "./Sidebar";
-import Links from "../../Links";
+import Links from "./Links";
 
 export const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -24,7 +24,7 @@ export const Header = () => {
 
   return (
     <nav
-      className={`w-full fixed left-1/2 -translate-x-1/2 top-0 z-20 text-primary hover:text-primary-900 transition-all duration-200 ease-linear ${
+      className={`header-parent-wrapper w-full fixed left-1/2 -translate-x-1/2 top-0 z-20 text-primary hover:text-primary-900 transition-all duration-200 ease-linear ${
         scrolled
           ? "shadow-md bg-white/[0.5] backdrop-blur-md"
           : "bg-transparent"
