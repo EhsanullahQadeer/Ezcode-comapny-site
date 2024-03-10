@@ -1,2 +1,12 @@
 .home-parent-wrapper {
+  .hero-section {
+    height: calc(100svh - 104px);
+    max-width: 70%;
+    margin: auto;
+  }
+
+  .text-with-border {
+    color: #ccd7e3;
+    -webkit-text-stroke: 2px #808bcc;
+  }
 }

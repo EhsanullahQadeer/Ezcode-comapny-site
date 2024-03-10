@@ -6,7 +6,7 @@ const Links = (props) => {
   console.log('sm: ', sm);
   const [active, setActive] = useState("");
   return (
-    <ul className={`list-none gap-10 ${sm ? "flex sm:hidden flex-col" : "hidden sm:flex"}`}>
+    <ul className={`list-none gap-10 flex flex-col`}>
       {navLinks.map((nav) => (
         <li
           key={nav.id}
