@@ -1,55 +1,54 @@
-import React, { useEffect, useState } from "react";
+import React, { useRef, useEffect } from "react";
+import { gsap } from "gsap/all";
+import { ScrollTrigger } from "gsap/ScrollTrigger"; 
 
+gsap.registerPlugin(ScrollTrigger); 
 const ZoomFadeComponent = () => {
-  const [scale, setScale] = useState(1);
+  const textRef = useRef(null);
+  const sectionRef = useRef(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const section = document.querySelector("#zoom-component");
-      const sectionTop = section.offsetTop;
-      const sectionBottom = sectionTop + section.offsetHeight;
-      const scrollY = window.scrollY;
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top -200",
+        end: "bottom 150%",
+        scrub: true,
+      },
+    });
 
-      // Check if the scroll position is within the section's boundaries
-      if (scrollY >= sectionTop && scrollY <= sectionBottom) {
-        // This time, let's make the zoom effect more pronounced at the start
-        // and gradually reduce the rate of zoom as we scroll down.
-        const zoomIntensity = 2; // Control the intensity of the zoom here
-        const newScale =
-          1 + Math.min(((scrollY - sectionTop) * zoomIntensity) / 1000, 20); // Limit max scale to 2, adjust as needed
+    tl.to(textRef.current, {
+      scale: 10,
+      duration: 5,
+    });
 
-        setScale(newScale);
-      }
+    return () => {
+      tl.kill(); 
     };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <>
+    <div
+      id="zoom-component"
+      className="py-64 relative"
+      style={{ height: "1400svh" }}
+      ref={sectionRef}
+    >
       <div
-        id="zoom-component"
-        className="py-64 relative"
-        style={{ height: "400svh" }}
+        className="sticky top-2/4 -translate-y-2/4"
+        style={{ transition: "transform 0.2s ease-out" }}
       >
-        <div
-          className="sticky top-2/4 -translate-y-2/4"
-          style={{ transition: "transform 0.2s ease-out" }}
+        <h1
+          ref={textRef}
+          style={{
+            transition: "transform 0.2s ease-out",
+          }}
+          className="text-medium-blue text-82 font-bold text-center"
         >
-          <h1
-            style={{
-              transform: `scale(${scale})`,
-              transition: "transform 0.2s ease-out",
-            }}
-            className="text-medium-blue text-82 font-bold text-center"
-          >
-            What We Do?
-          </h1>
-        </div>
+          What We Do?
+        </h1>
       </div>
-    </>
+    </div>
   );
 };
 

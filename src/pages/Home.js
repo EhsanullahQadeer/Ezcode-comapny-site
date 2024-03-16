@@ -2,6 +2,9 @@ import React from "react";
 import cloudIcon from "../assets/icons/home/cloud-computing.png";
 import webIcon from "../assets/icons/home/code.png";
 import ZoomFadeComponent from "../components/home/ZoomFadeComponent ";
+import { ServicesSection } from "../components/home/ServicesSection";
+import { AboutSection } from "../components/home/AboutSection";
+import { ProjectSection } from "../components/home/ProjectsSection";
 
 export const Home = () => {
   return (
@@ -28,6 +31,9 @@ export const Home = () => {
         </div>
 
         <ZoomFadeComponent />
+        <ServicesSection />
+        <AboutSection />
+        <ProjectSection />
       </div>
     </>
   );

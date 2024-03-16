@@ -14,8 +14,15 @@ module.exports = {
         "navy-blue2": "#050d1f",
         "navy-blue3": "#252d48",
 
+        silver: "#b3b7c8",
+        "light-blue": "#b7c7fc",
         "medium-blue": "#2449CD",
-        "serentry-blue": "#CCD7E3"
+        "powder-blue": "#a6bfec",
+        "sky-blue": "#c8ddff",
+        "serentry-blue": "#CCD7E3",
+        "royal-blue": "#1033b6",
+        "vivid-blue": "#194ce1",
+        "dark-blue": "#021b9f"
       },
       fontSize: {
         // Define fontSizes here
