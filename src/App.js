@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
-import { Header } from "./components/global/header/Header.js";
 import AllRoutes from "./routes/routes";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { motion, useScroll } from "framer-motion";
 import { Footer } from "./components/global/footer/Footer.js";
+import { Header } from "./components/global/header/Header.js";
 function App() {
   useEffect(() => {
     AOS.init({
