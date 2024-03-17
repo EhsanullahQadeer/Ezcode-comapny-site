@@ -15,9 +15,9 @@ export const TextFadeIn = ({ text, sectionRef }) => {
     // Apply animation to each word
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: sectionRef?.current,
+        trigger: sectionRef.current,
         start: "top bottom",
-        end: "bottom top",
+        end: "bottom 150%",
         scrub: true,
       },
     });

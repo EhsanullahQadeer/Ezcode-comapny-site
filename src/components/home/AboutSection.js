@@ -10,7 +10,7 @@ export const AboutSection = () => {
     <>
       <section
         ref={sectionRef}
-        style={{ height: "800svh" }}
+        style={{ height: "200svh" }}
         className="about-section-parent-wrapper w-full container mx-auto sm:px-16 px-6 relative"
       >
         <div className="sticky top-2/4 -translate-y-2/4">

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { TextFadeIn } from "../global/TextFadein";
 
 export const ServicesSection = () => {
@@ -24,18 +24,30 @@ export const ServicesSection = () => {
     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries";
 
   const sectionRef = useRef(null);
+
+  let top;
+
+  //7104
+
+  useEffect(() => {
+    if (sectionRef.current) {
+      top = sectionRef.current.offsetTop + sectionRef.current.offsetHeight;
+      console.log(top);
+    }
+  }, [sectionRef.current]);
+  
   return (
     <>
       <section
         ref={sectionRef}
-        style={{ height: "800svh" }}
+        style={{ height: "400svh" }}
         className="services-section-parent-wrapper w-full container mx-auto sm:px-16 px-6 pt-80 relative"
       >
         <div
           id="services-section"
           className="flex flex-col lg:flex-row justify-between items-center gap-10 sticky top-2/4 -translate-y-2/4"
         >
-          <div className="content-box">
+          <div data-aos="fade-right" className="content-box">
             <div
               data-aos="fade-up"
               className="text-medium-blue text-36 font-bold flex flex-col "
@@ -45,7 +57,7 @@ export const ServicesSection = () => {
             </div>
             <TextFadeIn text={fadeInText} sectionRef={sectionRef} />
           </div>
-          <div className="flex flex-col gap-5">
+          <div data-aos="fade-left" className="flex flex-col gap-5">
             {cardsData.map((data, idx) => {
               return (
                 <div
