@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import cloudIcon from "../assets/icons/home/cloud-computing.png";
 import webIcon from "../assets/icons/home/code.png";
-import ZoomFadeComponent from "../components/home/ZoomFadeComponent ";
+import ZoomComponent from "../components/home/ZoomFadeComponent ";
 import { ServicesSection } from "../components/home/ServicesSection";
 import { AboutSection } from "../components/home/AboutSection";
 import { ProjectSection } from "../components/home/ProjectsSection";
@@ -90,7 +90,7 @@ export const Home = () => {
           </div>
         </div>
 
-        {/* <ZoomFadeComponent /> */}
+        {/* <ZoomComponent /> */}
         <ServicesSection />
         <AboutSection />
         <ProjectSection />

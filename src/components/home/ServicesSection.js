@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { TextFadeIn } from "../global/TextFadein";
+import { motion, useScroll } from "framer-motion";
 
+let timeOutId;
 export const ServicesSection = () => {
   const cardsData = [
     {
@@ -25,22 +27,48 @@ export const ServicesSection = () => {
 
   const sectionRef = useRef(null);
 
-  // //7104
+  const [isSectionEnd, setIsSectionEnd] = useState(false);
+  const [hideProgressBar, sethideProgressBar] = useState(false);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["50vh start", "end 150vh"],
+  });
 
-  // useEffect(() => {
-  //   if (sectionRef.current) {
-  //     top = sectionRef.current.offsetTop + sectionRef.current.offsetHeight;
-  //     console.log(sectionRef.current.offsetTop);
-  //   }
-  // }, [sectionRef.current]);
+  const handleScroll = () => {
+    setIsSectionEnd(scrollYProgress.current === 1);
+  };
 
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    clearTimeout(timeOutId);
+    if (isSectionEnd) {
+      timeOutId = setTimeout(() => sethideProgressBar(true), 2000);
+    } else {
+      sethideProgressBar(false)
+    }
+  }, [isSectionEnd]);
   return (
     <>
       <section
         ref={sectionRef}
         style={{ height: "400svh" }}
-        className="services-section-parent-wrapper w-full container mx-auto sm:px-16 px-6 pt-80 relative"
+        className="services-section-parent-wrapper w-full container mx-auto sm:px-16 px-6 py-80 relative"
       >
+        {!hideProgressBar && (
+          <motion.div
+            className="progress-bar"
+            style={{
+              scaleX: scrollYProgress,
+              opacity: isSectionEnd ? "0" : "1",
+            }}
+          />
+        )}
         <div
           id="services-section"
           className="flex flex-col lg:flex-row justify-between items-center gap-10 sticky top-2/4 -translate-y-2/4"

@@ -14,15 +14,15 @@ function App() {
     });
   }, []);
 
-  const { scrollYProgress } = useScroll();
+  // const { scrollYProgress } = useScroll();
 
   return (
     <>
       <BrowserRouter>
-        <motion.div
+        {/* <motion.div
           className="progress-bar"
           style={{ scaleX: scrollYProgress }}
-        />
+        /> */}
         <Header />
         <AllRoutes />
         <Footer />
