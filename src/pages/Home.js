@@ -90,7 +90,7 @@ export const Home = () => {
           </div>
         </div>
 
-        <ZoomFadeComponent />
+        {/* <ZoomFadeComponent /> */}
         <ServicesSection />
         <AboutSection />
         <ProjectSection />

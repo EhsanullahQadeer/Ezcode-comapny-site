@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export const TextFadeIn = ({ text, sectionRef }) => {
+export const TextFadeIn = ({ text, sectionRef, animation, delay }) => {
   const textRef = useRef(null);
 
   useEffect(() => {
@@ -32,5 +32,5 @@ export const TextFadeIn = ({ text, sectionRef }) => {
     });
   }, [text]);
 
-  return <p data-aos="fade-up" ref={textRef}></p>;
+  return <p data-aos={animation} data-aos-delay={delay} ref={textRef}></p>;
 };

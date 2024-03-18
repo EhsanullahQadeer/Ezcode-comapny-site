@@ -14,10 +14,19 @@ export const AboutSection = () => {
         className="about-section-parent-wrapper w-full container mx-auto sm:px-16 px-6 relative"
       >
         <div className="sticky top-2/4 -translate-y-2/4">
-          <div className="about-box">
-            <h2 data-aos="fade-up" className="text-medium-blue text-36 font-bold">WHY EZ KODE?</h2>
+          <div className="about-box overflow-hidden">
+            <h2
+              data-aos="fade-down-left"
+              className="text-medium-blue text-36 font-bold overflow-hidden"
+            >
+              WHY EZ KODE?
+            </h2>
 
-            <TextFadeIn text={fadeInText} sectionRef={sectionRef} />
+            <TextFadeIn
+              animation="fade-up-right"
+              text={fadeInText}
+              sectionRef={sectionRef}
+            />
           </div>
         </div>
       </section>

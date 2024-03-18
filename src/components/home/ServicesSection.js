@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { TextFadeIn } from "../global/TextFadein";
 
 export const ServicesSection = () => {
@@ -25,17 +25,15 @@ export const ServicesSection = () => {
 
   const sectionRef = useRef(null);
 
-  let top;
+  // //7104
 
-  //7104
+  // useEffect(() => {
+  //   if (sectionRef.current) {
+  //     top = sectionRef.current.offsetTop + sectionRef.current.offsetHeight;
+  //     console.log(sectionRef.current.offsetTop);
+  //   }
+  // }, [sectionRef.current]);
 
-  useEffect(() => {
-    if (sectionRef.current) {
-      top = sectionRef.current.offsetTop + sectionRef.current.offsetHeight;
-      console.log(top);
-    }
-  }, [sectionRef.current]);
-  
   return (
     <>
       <section
@@ -47,21 +45,32 @@ export const ServicesSection = () => {
           id="services-section"
           className="flex flex-col lg:flex-row justify-between items-center gap-10 sticky top-2/4 -translate-y-2/4"
         >
-          <div data-aos="fade-right" className="content-box">
-            <div
-              data-aos="fade-up"
-              className="text-medium-blue text-36 font-bold flex flex-col "
-            >
-              <span>OUR</span>
-              <span className="services-text">SERVICES</span>
+          <div className="content-box">
+            <div className="text-medium-blue text-36 font-bold flex flex-col overflow-hidden">
+              <span data-aos="fade-down">OUR</span>
+
+              <span
+                className="services-text"
+                data-aos="fade-down"
+                data-aos-delay="800"
+              >
+                SERVICES
+              </span>
             </div>
-            <TextFadeIn text={fadeInText} sectionRef={sectionRef} />
+            <TextFadeIn
+              animation="fade"
+              delay="800"
+              text={fadeInText}
+              sectionRef={sectionRef}
+            />
           </div>
-          <div data-aos="fade-left" className="flex flex-col gap-5">
+
+          <div className="flex flex-col gap-5">
             {cardsData.map((data, idx) => {
               return (
                 <div
                   data-aos="fade-up"
+                  data-aos-delay="800"
                   key={data.title + idx}
                   className="services-box px-8 py-6 bg-royal-blue text-powder-blue rounded-3xl"
                 >
