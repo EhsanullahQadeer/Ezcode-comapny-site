@@ -1,0 +1,49 @@
+.solution {
+  position: relative;
+  height: 500vh;
+
+  @include desktop {
+    height: 500vh;
+  }
+
+  .inner {
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+
+    // &::after {
+    //   content: "";
+    //   background-color: red;
+    //   position: absolute;
+    //   height: 100%;
+    //   width: 100%;
+    //   left: 50%;
+    //   transform: translateX(-50%) scaleX(var(--progress2));
+    //   top: 0;
+    // }
+
+    @include desktop {
+      height: 100vh;
+    }
+
+    .zoom {
+      height: 100svh;
+      transform: scale(calc(1 + (var(--progress1)) * 3));
+    }
+  }
+
+  .enter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    white-space: nowrap;
+    transform: translate(-50%, -50%) scale(calc((var(--progress1) * 18.2)));
+    transform-origin: 50% calc(50% - (var(--progress1) * 27%));
+    text-align: center;
+
+    @include desktop {
+      transform: translate(-50%, -50%) scale(calc((var(--progress1) * 8.5)));
+      transform-origin: 42% 50%;
+    }
+  }
+}

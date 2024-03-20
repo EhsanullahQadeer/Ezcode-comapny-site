@@ -31,7 +31,7 @@ export const ServicesSection = () => {
   const [hideProgressBar, sethideProgressBar] = useState(false);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ["50vh start", "end 150vh"],
+    offset: ["-250vh start", "end 150vh"],
   });
 
   const handleScroll = () => {

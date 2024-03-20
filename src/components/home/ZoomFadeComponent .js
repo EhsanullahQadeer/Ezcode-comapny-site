@@ -1,85 +1,68 @@
 import React, { useEffect, useRef, useState } from "react";
-import { useTransform, useScroll, motion } from "framer-motion";
+import { useScroll } from "../../hooks/use-scroll";
+import cn from "clsx";
+import { useRect } from "@studio-freight/hamo";
+import { useWindowSize } from "react-use";
 
-let timeOutId;
-export default function ZoomElement() {
-  const textRef = useRef(null);
-  const sectionRef = useRef(null);
-  const { scrollY } = useScroll();
-  const [sectionHeight, setSectionHeight] = useState(0);
+export default function ZoomElement({ headingRef }) {
+  const zoomRef = useRef(null);
+  const [zoomWrapperRectRef, zoomWrapperRect] = useRect();
+  const { height: windowHeight } = useWindowSize();
 
-  useEffect(() => {
-    if (sectionRef.current) {
-      setSectionHeight(sectionRef.current.offsetHeight);
-    }
-  }, []);
+  function clamp(min, input, max) {
+    return Math.max(min, Math.min(input, max));
+  }
 
-  const progress = useTransform(scrollY, [1400, sectionHeight - 1400], [1, 20]);
+  function mapRange(in_min, in_max, input, out_min, out_max) {
+    return (
+      ((input - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min
+    );
+  }
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (textRef.current) {
-        textRef.current.style.transform = `scale(${progress.get()})`;
-      }
-    };
+  const handleScroll = ({ scroll }) => {
+    if (!zoomWrapperRect.top) return;
+    const start = zoomWrapperRect.top + windowHeight * 0.5;
+    const end = zoomWrapperRect.top + zoomWrapperRect.height - windowHeight;
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [progress]);
+    const progress = clamp(0, mapRange(start, end, scroll, 0, 1), 1);
+    const center = 0.6;
+    const progress1 = clamp(0, mapRange(0, center, progress, 0, 1), 1);
+    // const progress2 = clamp(0, mapRange(center - 0.055, 1, progress, 0, 1), 1);
 
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["50vh start", "end 100vh"],
-  });
+    const minimumProgress1 = Math.max(progress1, 0.1);
+    zoomRef.current.style.setProperty("--progress1", minimumProgress1);
 
-  const [isSectionEnd, setIsSectionEnd] = useState(false);
-  const [hideProgressBar, sethideProgressBar] = useState(false);
-
-  const handleScroll = () => {
-    setIsSectionEnd(scrollYProgress.current === 1);
+    // zoomRef.current.style.setProperty("--progress2", progress2 * 4);
+    // if (progress === 1) {
+    //   zoomRef.current.style.setProperty("background-color", "currentColor");
+    // }
+    // else {
+    //   zoomRef.current.style.removeProperty("background-color");
+    // }
   };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  useEffect(() => {
-    clearTimeout(timeOutId);
-    if (isSectionEnd) {
-      timeOutId = setTimeout(() => sethideProgressBar(true), 2000);
-    } else {
-      sethideProgressBar(false);
-    }
-  }, [isSectionEnd]);
+  useScroll(handleScroll);
 
   return (
-    <div
-      id="zoom-component"
-      className="py-64 relative"
-      style={{ height: "800svh" }}
-      ref={sectionRef}
+    <section
+      ref={(node) => {
+        zoomWrapperRectRef(node);
+        zoomRef.current = node;
+      }}
+      className="solution"
     >
-      {!hideProgressBar && (
-        <motion.div
-          className="progress-bar"
-          style={{ scaleX: scrollYProgress, opacity: isSectionEnd ? "0" : "1" }}
-        />
-      )}
-
-      <div className="sticky top-2/4 -translate-y-2/4">
-        <h1
-          ref={textRef}
-          className="text-medium-blue text-82 font-bold text-center"
-          style={{
-            transition: "transform 0.2s ease-out",
-          }}
-        >
-          What We Do?
-        </h1>
+      <div className="inner">
+        <div className="zoom">
+          <h2
+            ref={headingRef}
+            className={`${cn(
+              "enter",
+              "h3 vh"
+            )} text-medium-blue text-82 font-bold text-center`}
+          >
+            WHAT WE DO?
+          </h2>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

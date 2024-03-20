@@ -3,26 +3,59 @@ import { BrowserRouter } from "react-router-dom";
 import AllRoutes from "./routes/routes";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { motion, useScroll } from "framer-motion";
 import { Footer } from "./components/global/footer/Footer.js";
 import { Header } from "./components/global/header/Header.js";
+import Lenis from "@studio-freight/lenis";
+import { useStore } from "./lib/store.js";
 function App() {
   useEffect(() => {
     AOS.init({
       duration: 1000,
       once: false,
+      mirror: true,
     });
   }, []);
 
-  // const { scrollYProgress } = useScroll();
+  const lenis = new Lenis({
+    lerp: 0.1,
+  });
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
+
+  const [setLenis] = useStore((state) => [state.setLenis]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    const lenis = new Lenis({
+      // gestureOrientation: 'both',
+      smoothWheel: true,
+      // smoothTouch: true,
+      syncTouch: true,
+    });
+    window.lenis = lenis;
+    setLenis(lenis);
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy();
+      setLenis(null);
+    };
+  }, []);
 
   return (
     <>
       <BrowserRouter>
-        {/* <motion.div
-          className="progress-bar"
-          style={{ scaleX: scrollYProgress }}
-        /> */}
         <Header />
         <AllRoutes />
         <Footer />
