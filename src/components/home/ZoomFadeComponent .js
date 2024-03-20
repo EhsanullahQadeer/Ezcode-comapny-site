@@ -6,6 +6,7 @@ import { useWindowSize } from "react-use";
 
 export default function ZoomElement({ headingRef }) {
   const zoomRef = useRef(null);
+  const boxRef = useRef(null);
   const [zoomWrapperRectRef, zoomWrapperRect] = useRect();
   const { height: windowHeight } = useWindowSize();
 
@@ -32,6 +33,15 @@ export default function ZoomElement({ headingRef }) {
     const minimumProgress1 = Math.max(progress1, 0.1);
     zoomRef.current.style.setProperty("--progress1", minimumProgress1);
 
+    console.log(progress1);
+
+    // if (progress1 === 1) {
+    //   boxRef.current.style.setProperty("bottom", "-50%");
+    // } else {
+    //   boxRef.current.style.removeProperty("height");
+    // }
+
+      
     // zoomRef.current.style.setProperty("--progress2", progress2 * 4);
     // if (progress === 1) {
     //   zoomRef.current.style.setProperty("background-color", "currentColor");
@@ -51,7 +61,7 @@ export default function ZoomElement({ headingRef }) {
       className="solution"
     >
       <div className="inner">
-        <div className="zoom">
+        <div ref={boxRef} className="zoom">
           <h2
             ref={headingRef}
             className={`${cn(

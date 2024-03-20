@@ -1,15 +1,13 @@
 .home-parent-wrapper {
-  // .heading[data-aos="new-animation"] {
-  //   transform: translateX(300px);
-
-  //   &.aos-animate {
-  //     transform: translateX(0);
-  //   }
-  // }
   .hero-section {
-    height: calc(100svh - 104px);
-    max-width: 70%;
-    margin: auto;
+    // height: 270svh;
+    // height: calc(270svh - 104px);
+    // max-width: 70%;
+    // margin: auto;
+    height: 200svh;
+    .hero-section-box {
+      top: 47%;
+    }
   }
 
   .text-with-border {
@@ -20,7 +18,7 @@
   .zoom-section-parent-wrapper {
     height: 100vh;
     position: relative;
-    overflow: hidden; /* Ensure the container doesn't scroll */
+    overflow: hidden;
   }
 
   .toggle-class {
