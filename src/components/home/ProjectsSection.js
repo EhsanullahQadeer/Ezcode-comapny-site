@@ -10,7 +10,7 @@ const projectsData = [
 export const ProjectSection = () => {
   return (
     <>
-      <div className="project-section-parent-wrapper w-full container mx-auto sm:px-16 px-6">
+      <div className="project-section-parent-wrapper w-full container mx-auto sm:px-16 px-6 pb-20">
         <div
           data-aos="fade-up"
           className="text-medium-blue text-36 font-bold flex flex-col py-10"
