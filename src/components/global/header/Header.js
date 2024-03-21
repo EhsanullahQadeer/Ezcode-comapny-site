@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "../../../assets/icons/global/logo.png";
+import logo from "../../../assets/icons/global/logo.svg";
 import { Link } from "react-router-dom";
 import { MenuItems } from "./MenuItems";
 import { ToggleButton } from "./ToggleButton";
