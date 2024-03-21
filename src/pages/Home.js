@@ -7,6 +7,8 @@ import { AboutSection } from "../components/home/AboutSection";
 import { ProjectSection } from "../components/home/ProjectsSection";
 import ScrollerText from "../components/home/ScrollerText";
 import AnimateText from "../components/home/AnimateText";
+import { ReactComponent as LogoTop } from "../assets/icons/home/logoTop.svg";
+import { ScrollerLogo } from "../components/home/ScrollerLogo";
 
 export const Home = () => {
   // const [showHeroSection, setShowHeroSection] = useState(true);
@@ -49,7 +51,7 @@ export const Home = () => {
           className="hero-section container mx-auto sm:px-16 px-6 relative"
         >
           <div className="hero-section-box sticky flex flex-col justify-center -translate-y-2/4">
-            <div className="overflow-hidden" style={{ height: "max-content" }}>
+            {/* <div className="overflow-hidden" style={{ height: "max-content" }}>
               <h1
                 data-aos="fade-up"
                 data-aos-mirror="true"
@@ -58,11 +60,13 @@ export const Home = () => {
               >
                 EZ KODE
               </h1>
-            </div>
-            <div className="flex flex-col relative max-w-fit left-1/2 -translate-x-2/4">
+            </div> */}
+            <div className="relative max-w-fit left-1/2 -translate-x-2/4">
               <AnimateText sectionRef={heroSectionRef} />
 
-              <div className="flex gap-12">
+              <ScrollerLogo sectionRef={heroSectionRef}/>
+
+              {/* <div className="flex gap-12">
                 <div
                   style={{
                     overflow: "hidden",
@@ -95,7 +99,7 @@ export const Home = () => {
                     Web Development
                   </span>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

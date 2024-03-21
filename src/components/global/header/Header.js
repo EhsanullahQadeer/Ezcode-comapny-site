@@ -18,6 +18,7 @@ export const Header = () => {
       transition: {
         type: "spring",
         stiffness: 20,
+        duration: 0.3,
       },
     },
     closed: {
@@ -27,6 +28,7 @@ export const Header = () => {
         type: "spring",
         stiffness: 400,
         damping: 40,
+        duration: 0.3,
       },
     },
   };
