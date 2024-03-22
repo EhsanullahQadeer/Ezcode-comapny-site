@@ -2,10 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 
 // css of this file is in header.scss
-export const ToggleButton = ({ setIsOpen }) => {
+export const ToggleButton = () => {
   return (
     <>
-      <button onClick={() => setIsOpen((prev) => !prev)}>
+      <button >
         <svg width="23" height="23" viewBox="0 0 23 23">
           <motion.path
             strokeWidth="3"

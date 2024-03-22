@@ -12,26 +12,24 @@ export const Header = () => {
     setIsOpen(false);
   };
 
-  const variants = {
-    open: {
-      clipPath: "circle(600px at 50px 50px)",
-      transition: {
-        type: "spring",
-        stiffness: 20,
-        duration: 0.3,
-      },
-    },
-    closed: {
-      clipPath: "circle(0px at 260px 0px)",
-      transition: {
-        // delay: 0.5,
-        type: "spring",
-        stiffness: 400,
-        damping: 40,
-        duration: 0.3,
-      },
-    },
-  };
+  // const variants = {
+  //   open: {
+  //     clipPath: "circle(600px at 50px 50px)",
+  //     transition: {
+  //       type: "spring",
+  //       stiffness: 20,
+  //     },
+  //   },
+  //   closed: {
+  //     clipPath: "circle(0px at 260px 0px)",
+  //     transition: {
+  //       type: "spring",
+  //       stiffness: 400,
+  //       damping: 40,
+  //     },
+  //   },
+  // };
+  console.log("isOpen: ", isOpen);
 
   return (
     <>
@@ -56,21 +54,29 @@ export const Header = () => {
         >
           <AnimatePresence>
             <motion.div
-              variants={variants}
               className="bg"
-              style={{ maxWidth: "300px", borderRadius: "30px" }}
+              style={{
+                maxHeight: "600px",
+                maxWidth: "300px",
+                borderRadius: "30px",
+                clipPath: isOpen
+                  ? "circle(600px at 50px 50px)"
+                  : "circle(0px at 260px 0)",
+                transition: "clip-path 0.5s ease-in-out",
+              }}
             >
               <MenuItems closeDrawer={closeDrawer} />
             </motion.div>
           </AnimatePresence>
           <div
-            className="bg-dodger-blue px-4 py-2 flex"
+            onClick={() => setIsOpen((prev) => !prev)}
+            className="bg-dodger-blue px-4 py-2 flex cursor-pointer"
             style={{
               borderRadius: isOpen ? "30px" : "10px",
               transition: "all 0.5s ease",
             }}
           >
-            <ToggleButton setIsOpen={setIsOpen} />
+            <ToggleButton />
           </div>
         </motion.div>
       </div>
