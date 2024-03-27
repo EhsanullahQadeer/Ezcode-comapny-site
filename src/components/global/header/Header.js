@@ -12,25 +12,6 @@ export const Header = () => {
     setIsOpen(false);
   };
 
-  // const variants = {
-  //   open: {
-  //     clipPath: "circle(600px at 50px 50px)",
-  //     transition: {
-  //       type: "spring",
-  //       stiffness: 20,
-  //     },
-  //   },
-  //   closed: {
-  //     clipPath: "circle(0px at 260px 0px)",
-  //     transition: {
-  //       type: "spring",
-  //       stiffness: 400,
-  //       damping: 40,
-  //     },
-  //   },
-  // };
-  console.log("isOpen: ", isOpen);
-
   return (
     <>
       <div className="header-parent flex flex-row items-center justify-between gap-4 container mx-auto sm:px-16 px-6 sticky w-full bg-transparent">
@@ -47,38 +28,46 @@ export const Header = () => {
           </Link>
         </div>
 
-        <motion.div
-          className="menu-drawer"
-          animate={isOpen ? "open" : "closed"}
-          initial="closed"
-        >
-          <AnimatePresence>
-            <motion.div
-              className="bg"
+        <div className="flex flex-row items-center gap-4 md:gap-12">
+          <Link to="/contact">
+            <button className="text-white text-16 font-medium bg-dodger-blue py-2 px-6 hover:bg-oceanic-blue">
+              Book a call
+            </button>
+          </Link>
+
+          <motion.div
+            className="menu-drawer"
+            animate={isOpen ? "open" : "closed"}
+            initial="closed"
+          >
+            <AnimatePresence>
+              <motion.div
+                className="bg"
+                style={{
+                  maxHeight: "600px",
+                  maxWidth: "300px",
+                  borderRadius: "30px",
+                  clipPath: isOpen
+                    ? "circle(600px at 50px 50px)"
+                    : "circle(0px at 260px 0)",
+                  transition: "clip-path 0.5s ease-in-out",
+                }}
+              >
+                <MenuItems closeDrawer={closeDrawer} />
+              </motion.div>
+            </AnimatePresence>
+            <div
+              onClick={() => setIsOpen((prev) => !prev)}
+              className="bg-dodger-blue px-4 py-2 flex cursor-pointer"
               style={{
-                maxHeight: "600px",
-                maxWidth: "300px",
-                borderRadius: "30px",
-                clipPath: isOpen
-                  ? "circle(600px at 50px 50px)"
-                  : "circle(0px at 260px 0)",
-                transition: "clip-path 0.5s ease-in-out",
+                borderRadius: isOpen ? "30px" : "10px",
+                transition: "all 0.5s ease",
               }}
             >
-              <MenuItems closeDrawer={closeDrawer} />
-            </motion.div>
-          </AnimatePresence>
-          <div
-            onClick={() => setIsOpen((prev) => !prev)}
-            className="bg-dodger-blue px-4 py-2 flex cursor-pointer"
-            style={{
-              borderRadius: isOpen ? "30px" : "10px",
-              transition: "all 0.5s ease",
-            }}
-          >
-            <ToggleButton />
-          </div>
-        </motion.div>
+              <ToggleButton />
+            </div>
+          </motion.div>
+        </div>
       </div>
     </>
   );
