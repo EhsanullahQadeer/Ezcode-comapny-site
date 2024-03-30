@@ -5,3 +5,42 @@
     }
   }
 }
+
+.hero-heading {
+  font-size: 24px;
+  @include sm {
+    font-size: 30px;
+  }
+  @include lg {
+    font-size: 2.93vw;
+  }
+  @include xl {
+    font-size: 2.19vw;
+  }
+}
+
+.hero-heading-3 {
+  font-size: 18px;
+  @include sm {
+    font-size: 22px;
+  }
+  @include lg {
+    font-size: 1.76vw;
+  }
+  @include xl {
+    font-size: 1.34vw;
+  }
+}
+
+.hero-heading-4 {
+  font-size: 14px;
+  @include sm {
+    font-size: 18px;
+  }
+  @include lg {
+    font-size: 1.37vw;
+  }
+  @include xl {
+    font-size: 1.05vw;
+  }
+}

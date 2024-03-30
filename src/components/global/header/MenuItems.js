@@ -22,7 +22,7 @@ export const MenuItems = ({ closeDrawer }) => {
           </Link>
         </li>
         <li>
-          <Link to="/" onClick={closeDrawer}>
+          <Link to="/about" onClick={closeDrawer}>
             ABOUT
           </Link>
         </li>

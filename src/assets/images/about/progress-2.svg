@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="162px" height="162px" viewBox="0 0 162 162" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>Group 9</title>
+    <desc>Created with Sketch.</desc>
+    <g id="MAIN-FLOW-v2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ABOUT" transform="translate(-875.000000, -2613.000000)" stroke-width="12">
+            <g id="Section" transform="translate(0.000000, 2079.000000)">
+                <g id="Group-4" transform="translate(630.000000, 540.000000)">
+                    <g id="Group-9" transform="translate(251.000000, 0.000000)">
+                        <circle id="Oval-Copy-2" stroke="#F1F0F7" stroke-linecap="square" cx="75" cy="75" r="75"></circle>
+                        <path d="M171,34.2952662 C158.958537,25.9116748 144.344304,21 128.589171,21 C87.3947096,21 54,54.5786438 54,96" id="Oval-Copy-3" stroke="#FEBF34" transform="translate(112.500000, 58.500000) rotate(-270.000000) translate(-112.500000, -58.500000) "></path>
+                        <path d="M96,34.2952662 C83.9585374,25.9116748 69.3443041,21 53.5891715,21 C12.3947096,21 -21,54.5786438 -21,96" id="Oval-Copy-3" stroke="#FEBF34" transform="translate(37.500000, 58.500000) scale(-1, 1) rotate(-270.000000) translate(-37.500000, -58.500000) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

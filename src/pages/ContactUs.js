@@ -10,12 +10,6 @@ export const ContactUs = () => {
     setTimeout(() => {
       setShowLoader(false);
     }, 1000);
-
-    // try {
-    //   setShowLoader(false);
-    // } catch (error) {
-    //   console.error("Error submitting form:", error);
-    // }
   };
   return (
     <>
@@ -33,7 +27,7 @@ export const ContactUs = () => {
           </h3>
           <div className="text-slate-blue-gray">
             <a href="" className="mb-1 inline-block hover:text-medium-blue">
-              info@modsi.io
+              info@ezkode.io
             </a>
           </div>
         </div>
