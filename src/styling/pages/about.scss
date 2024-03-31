@@ -14,57 +14,34 @@
           box-shadow: 0 10px 20px 0 rgba(155, 167, 188, 0.37);
         }
 
-        img {
+        .carousel-img {
           max-height: 320px;
+          aspect-ratio: 1;
           width: 100%;
+          object-fit: cover;
+          object-position: top;
         }
       }
     }
   }
 
-  .about-section-wrapper {
-    .about-illustration-1 {
-      position: relative;
-      max-width: 130vw;
-      left: 8vw;
-
-      @include md {
-        left: auto;
-        max-width: 56.7vw;
-      }
+  .img-section {
+    flex: 40%;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 10px;
     }
+  }
+  .content-section {
+    flex: 60%;
   }
 
   .stats-section-wrapper {
     .stat-wrapper {
       @include md {
         width: 14%;
-      }
-    }
-  }
-
-  .experts-section-wrapper {
-    .about-illustration-2 {
-      position: relative;
-      max-width: 150vw;
-      left: 22vw;
-
-      @include md {
-        left: auto;
-        max-width: 63.95vw;
-      }
-    }
-  }
-
-  .support-section-wrapper {
-    .about-illustration-3 {
-      position: relative;
-      max-width: 200vw;
-      left: -85vw;
-
-      @include md {
-        left: -50vw;
-        max-width: 104.75vw;
       }
     }
   }

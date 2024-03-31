@@ -1,9 +1,5 @@
 .home-parent-wrapper {
   .hero-section {
-    // height: 270svh;
-    // height: calc(270svh - 104px);
-    // max-width: 70%;
-    // margin: auto;
     height: 350svh;
     .hero-section-box {
       top: 50%;
@@ -31,8 +27,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    background-color: red; /* Just for visibility */
-    transform-origin: center; /* Ensure zooming happens from the center */
+    background-color: red;
+    transform-origin: center;
   }
 
   .services-section-parent-wrapper {
@@ -51,7 +47,7 @@
     .about-box {
       max-width: 60%;
 
-      @include lg {
+      @include below-lg {
         max-width: max-content;
       }
     }

@@ -11,7 +11,7 @@ export const HeroSection = ({ allMembersRef, aboutRef }) => {
     <>
       <div className="hero-section-wrapper relative mt-20 lg:mt-32 pt-2 2xl:pt-0 flex flex-col lg:flex-row-reverse gap-10">
         <div className="container lg:-ml-6 2xl:ml-0 text-center w-full lg:w-1/2 lg:-translate-y-20">
-          <HeroSectionCarousel padding="right" showDots={true} />
+          <HeroSectionCarousel padding="right" section="hero" />
           <span
             onClick={() => handleScrolling(allMembersRef)}
             class="inline-flex flex-col items-center mx-auto mt-2 md:mt-4 lg:mt-6 2xl:mt-8 uppercase font-bold text-xs xl:text-sm text-medium-blue hover:underline cursor-pointer"
@@ -24,9 +24,9 @@ export const HeroSection = ({ allMembersRef, aboutRef }) => {
         <div className="flex-1">
           <div className="mb-20 2xl:mb-30">
             <h2 className="hero-heading relative inline-block text-medium-blue font-bold leading-snug">
-              Our team is staffed to <br />
-              support your new or <br />
-              pre-existing platforms
+              Software Development Company <br />
+              That Can Breathe Life Into <br />
+              Your Vision
             </h2>
 
             <div className="w-10 2xl:w-16 h-1 my-8 bg-misty-sky-blue"></div>
@@ -44,15 +44,16 @@ export const HeroSection = ({ allMembersRef, aboutRef }) => {
             <div>
               <div class="hero-heading-3 text-golden-yellow mb-1">01</div>
               <div class="hero-heading-4 text-medium-blue">
-                Industry
-                <br /> Experts
+                Expertise at
+                <br /> Ezkode
               </div>
               <div class="w-10 2xl:w-16 h-1 mt-3 bg-misty-sky-blue"></div>
             </div>
             <div>
               <div class="hero-heading-3 text-golden-yellow mb-1">02</div>
               <div class="hero-heading-4 text-medium-blue">
-                Elastic <br /> Support
+                Agile
+                <br /> Staffing
               </div>
               <div class="w-10 2xl:w-16 h-1 mt-3 bg-misty-sky-blue"></div>
             </div>

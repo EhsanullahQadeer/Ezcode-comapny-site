@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
-import personImg from "../../assets/images/about/campbell.jpg";
+import { teamMembers } from "../../constant";
 
 export const HeroSectionCarousel = ({
   padding,
@@ -9,57 +9,34 @@ export const HeroSectionCarousel = ({
   rightButton,
   leftBtnRef,
   rightBtnRef,
-  showDots
+  section,
 }) => {
-  const items = [
-    <div
-      className={`item-wrapper flex flex-col gap-6 ${
-        padding === "right" ? "lg:pr-10" : "lg:pl-10"
-      }`}
-    >
-      <div className="img-wrapper w-full">
-        <img src={personImg} alt="personImg" />
-      </div>
-      <h3 className="text-lg xl:text-xl 2xl:text-2xl text-medium-blue text-center">
-        Blake Connally
-        <span class="block text-light-blue text-sm 2xl:text-base">
-          CEO &amp; Founder
-        </span>
-      </h3>
-    </div>,
+  let filteredTeamMembers = teamMembers;
 
-    <div
-      className={`item-wrapper flex flex-col gap-6 ${
-        padding === "right" ? "lg:pr-10" : "lg:pl-10"
-      }`}
-    >
-      <div className="img-wrapper w-full">
-        <img src={personImg} alt="personImg" />
+  if (section === "hero") {
+    filteredTeamMembers = teamMembers.slice(0, 3);
+  }
+  
+  const items = filteredTeamMembers.map((member) => {
+    return (
+      <div
+        key={member.id}
+        className={`item-wrapper flex flex-col gap-6 ${
+          padding === "right" ? "lg:pr-10" : "lg:pl-10"
+        }`}
+      >
+        <div className="img-wrapper w-full">
+          <img className="carousel-img" src={member.imgSrc} alt="personImg" />
+        </div>
+        <h3 className="text-lg xl:text-xl 2xl:text-2xl text-medium-blue text-center">
+          {member.name}
+          <span className="block text-light-blue text-sm 2xl:text-base">
+            {member.position}
+          </span>
+        </h3>
       </div>
-      <h3 className="text-lg xl:text-xl 2xl:text-2xl text-medium-blue text-center">
-        Blake Connally
-        <span class="block text-light-blue text-sm 2xl:text-base">
-          CEO &amp; Founder
-        </span>
-      </h3>
-    </div>,
-    <div
-      className={`item-wrapper flex flex-col gap-6 ${
-        padding === "right" ? "lg:pr-10" : "lg:pl-10"
-      }`}
-    >
-      <div className="img-wrapper w-full">
-        <img src={personImg} alt="personImg" />
-      </div>
-
-      <h3 className="text-lg xl:text-xl 2xl:text-2xl text-medium-blue text-center">
-        Blake Connally
-        <span class="block text-light-blue text-sm 2xl:text-base">
-          CEO &amp; Founder
-        </span>
-      </h3>
-    </div>,
-  ];
+    );
+  });
 
   const [paddingRight, setPaddingRight] = useState(0);
   const [paddingLeft, setPaddingLeft] = useState(0);
@@ -95,17 +72,25 @@ export const HeroSectionCarousel = ({
       <div className="hero-section-carousel-parent relative mb-8 md:mb-0">
         <AliceCarousel
           disableButtonsControls={leftButton || rightButton ? false : true}
-          disableDotsControls = {showDots ? false : true}
+          disableDotsControls={section === "hero" ? false : true}
           responsive={itemsNumber}
           controlsStrategy="alternate"
           infinite
           paddingRight={paddingRight}
           paddingLeft={paddingLeft}
           renderPrevButton={() => {
-            return <div ref={leftBtnRef} className="hidden">{leftButton}</div>;
+            return (
+              <div ref={leftBtnRef} className="hidden">
+                {leftButton}
+              </div>
+            );
           }}
           renderNextButton={() => {
-            return <div ref={rightBtnRef} className="hidden">{rightButton}</div>;
+            return (
+              <div ref={rightBtnRef} className="hidden">
+                {rightButton}
+              </div>
+            );
           }}
           items={items}
         />

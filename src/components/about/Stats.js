@@ -6,13 +6,12 @@ import progress3 from "../../assets/images/about/progress-3.svg";
 export const Stats = () => {
   return (
     <>
-      <div className="stats-section-wrapper flex items-center lg:min-h-screen pt-32 lg:pt-0 lg:-mt-28">
+      <div className="stats-section-wrapper flex items-center lg:min-h-screen pt-32 lg:pt-0 ">
         <div className="container px-6 lg:px-0">
           <div className="flex flex-wrap justify-center text-center">
             <div className="w-full md:w-10/12 md:px-10 mb-12 lg:mb-20">
               <h2 className="text-3xl 2xl:text-4xl text-medium-blue font-bold leading-tight">
-                We grow as you need us to! <br className="hidden md:block" />
-                The industry leader in advanced software development
+                Our results speak for themselves
               </h2>
             </div>
 
@@ -21,7 +20,7 @@ export const Stats = () => {
                 <div className="relative">
                   <img src={progress1} className="w-full mb-6" alt="" />
                   <span className="absolute top-0 left-0 w-full h-full flex items-center justify-center font-light text-3/2xl lg:text-4xl text-medium-blue">
-                    75+
+                    25+
                   </span>
                 </div>
                 <span className="whitespace-nowrap">Happy Clients</span>
@@ -30,7 +29,7 @@ export const Stats = () => {
                 <div className="relative">
                   <img src={progress2} className="w-full mb-6" alt="" />
                   <span className="absolute top-0 left-0 w-full h-full flex items-center justify-center font-light text-3/2xl lg:text-4xl text-medium-blue">
-                    120
+                    200
                   </span>
                 </div>
                 <span className="whitespace-nowrap">Products Managed</span>
@@ -39,7 +38,7 @@ export const Stats = () => {
                 <div className="relative">
                   <img src={progress3} className="w-full mb-6" alt="" />
                   <span className="absolute top-0 left-0 w-full h-full flex items-center justify-center font-light text-3/2xl lg:text-4xl text-medium-blue">
-                    500K
+                    300K
                   </span>
                 </div>
                 <span className="whitespace-nowrap">Lines of Code</span>
