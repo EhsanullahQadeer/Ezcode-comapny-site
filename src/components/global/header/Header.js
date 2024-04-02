@@ -30,7 +30,7 @@ export const Header = () => {
 
         <div className="flex flex-row items-center gap-4 md:gap-12">
           <Link to="/contact">
-            <button className="text-white text-16 font-medium bg-dodger-blue py-2 px-6 hover:bg-oceanic-blue rounded-md">
+            <button className="text-white text-16 font-medium bg-dodger-blue hover:bg-oceanic-blue py-2 px-6 rounded-md">
               Book a call
             </button>
           </Link>

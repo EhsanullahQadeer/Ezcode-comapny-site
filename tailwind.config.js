@@ -14,6 +14,7 @@ module.exports = {
         "navy-blue2": "#050d1f",
         "navy-blue3": "#252d48",
 
+        "low-opacity-black": "rgba(0, 0, 0, 0.5)",
         silver: "#b3b7c8",
         "slate-blue-gray": "#888fa6",
         "golden-yellow": "#feb512",
@@ -24,6 +25,7 @@ module.exports = {
         "powder-blue": "#a6bfec",
         "pale-sky-blue": "#e6edf8",
         "sky-blue": "#c8ddff",
+        "whispering-sky-blue": "#f4f6fd",
         "serentry-blue": "#CCD7E3",
         "royal-blue": "#1033b6",
         "deep-blue": "#1733b2",
@@ -44,6 +46,7 @@ module.exports = {
         27: "27px",
         24: "24px",
         22: "22px",
+        20: "20px",
         19: "19px",
         17: "17px",
         18: "18px",

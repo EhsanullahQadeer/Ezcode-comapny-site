@@ -12,12 +12,12 @@ export const MenuItems = ({ closeDrawer }) => {
           </Link>
         </li>
         <li>
-          <Link to="/" onClick={closeDrawer}>
+          <Link to="/work" onClick={closeDrawer}>
             WORK
           </Link>
         </li>
         <li>
-          <Link to="/" onClick={closeDrawer}>
+          <Link to="/services" onClick={closeDrawer}>
             Services
           </Link>
         </li>
@@ -27,7 +27,7 @@ export const MenuItems = ({ closeDrawer }) => {
           </Link>
         </li>
         <li>
-          <Link to="/" onClick={closeDrawer}>
+          <Link to="/contact" onClick={closeDrawer}>
             CONTACT
           </Link>
         </li>

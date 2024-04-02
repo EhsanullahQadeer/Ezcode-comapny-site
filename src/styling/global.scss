@@ -44,3 +44,48 @@
     font-size: 1.05vw;
   }
 }
+
+.testimonial-wrapper {
+  border-left: 4px solid #2745c8;
+}
+
+.accordian-wrapper {
+  &.MuiAccordion-root {
+    box-shadow: none;
+
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+
+    &.first-item {
+      border-top: none;
+    }
+
+    &.Mui-expanded {
+      margin: 0;
+      .MuiAccordionSummary-root {
+        min-height: 48px !important;
+      }
+
+      .MuiAccordionSummary-content {
+        margin-top: 12px !important;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      right: 0;
+      height: 0px;
+      content: "";
+      opacity: 1;
+      background-color: rgba(0, 0, 0, 0.12);
+    }
+
+    .MuiAccordionDetails-root {
+      margin: 0px 40px 10px;
+      padding: 20px;
+      border-radius: 4px;
+      border-left: 2px solid #2745c8;
+    }
+  }
+}
