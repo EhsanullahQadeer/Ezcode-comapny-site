@@ -7,6 +7,19 @@ import { Footer } from "./components/global/footer/Footer.js";
 import { Header } from "./components/global/header/Header.js";
 import Lenis from "@studio-freight/lenis";
 import { useStore } from "./lib/store.js";
+
+import { useLocation } from "react-router-dom";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
   useEffect(() => {
     AOS.init({
@@ -57,6 +70,7 @@ function App() {
     <>
       <BrowserRouter>
         <Header />
+        <ScrollToTop />
         <AllRoutes />
         <Footer />
       </BrowserRouter>
@@ -64,4 +78,4 @@ function App() {
   );
 }
 
-export default App;
+export { App, ScrollToTop };
