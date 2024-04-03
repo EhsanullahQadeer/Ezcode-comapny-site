@@ -15,7 +15,7 @@ export const ReviewsSection = () => {
   const filteredReviewsLength = customerReviews.slice(0, reviewsLength);
   return (
     <>
-      <div className="testimonial-section-wrapper bg-whispering-sky-blue py-16">
+      <div className="testimonial-section-wrapper bg-whispering-sky-blue py-16 mt-16">
         <div className="container mx-auto sm:px-16 px-6">
           <h2 className="hero-heading font-bold text-medium-blue mb-2 text-center">
             Customer’s Reviews

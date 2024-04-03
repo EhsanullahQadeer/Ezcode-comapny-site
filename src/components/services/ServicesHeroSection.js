@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ForumIcon from "@mui/icons-material/Forum";
+import heroSectionImg from "../../assets/images/services/hero-section-bg.svg"
 
 export const ServicesHeroSection = () => {
   return (
@@ -8,7 +9,7 @@ export const ServicesHeroSection = () => {
       <div className="services-hero-section-parent container mx-auto sm:px-16 px-6 flex flex-col lg:flex-row items-center">
         <div data-aos="fade-left" class="lg:order-2 order-1">
           <img
-            src="https://crustlab.com/wp-content/uploads/2021/05/Group-639.svg"
+            src={heroSectionImg}
             alt="Software development services​ provider title image"
             width="auto"
             height="auto"

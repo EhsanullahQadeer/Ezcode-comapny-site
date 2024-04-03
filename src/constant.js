@@ -19,6 +19,17 @@ import designingImg from "./assets/images/services/graphic-designing-min.jpg";
 import iphoneImg from "./assets/images/services/iphone-app-development-min.jpg";
 import mobileImg from "./assets/images/services/mobile-app-dev-min.jpg";
 
+// portfolio images
+import portfolioBoatImg from "./assets/images/work/porfolio-boat.png";
+
+// work hero section icons
+import EmojiEventsIcon from "@mui/icons-material/EmojiEventsOutlined";
+import BadgeIcon from "@mui/icons-material/BadgeOutlined";
+import DiamondIcon from '@mui/icons-material/DiamondOutlined';
+import PersonIcon from '@mui/icons-material/PersonOutlined';
+import WebhookIcon from '@mui/icons-material/WebhookOutlined';
+import GradeIcon from '@mui/icons-material/GradeOutlined';
+
 export const teamMembers = [
   {
     imgSrc: personImgSrc,
@@ -175,4 +186,66 @@ export const services = [
     desc: " Most of the traffic comes from the first 3-5 positions in the SERP. Therefore, we increase the visibility of the application in the search results: we conduct text optimization taking into account the features of the store and their ranking algorithms. To increase the conversion to the installation, we work on the icon and screenshots to make the application more attractive to users.",
     imgSrc: asoImg,
   },
+];
+
+export const portfolioProjects = [
+  {
+    imgSrc: portfolioBoatImg,
+    projectName: "Boat Booking Platform",
+    projectLink: "",
+  },
+
+  {
+    imgSrc: portfolioBoatImg,
+    projectName: "Boat Booking Platform",
+    projectLink: "",
+  },
+  {
+    imgSrc: portfolioBoatImg,
+    projectName: "Boat Booking Platform",
+    projectLink: "",
+  },
+  {
+    imgSrc: portfolioBoatImg,
+    projectName: "Boat Booking Platform",
+    projectLink: "",
+  },
+  {
+    imgSrc: portfolioBoatImg,
+    projectName: "Boat Booking Platform",
+    projectLink: "",
+  },
+  {
+    imgSrc: portfolioBoatImg,
+    projectName: "Boat Booking Platform",
+    projectLink: "",
+  },
+  {
+    imgSrc: portfolioBoatImg,
+    projectName: "Boat Booking Platform",
+    projectLink: "",
+  },
+  {
+    imgSrc: portfolioBoatImg,
+    projectName: "Boat Booking Platform",
+    projectLink: "",
+  },
+  {
+    imgSrc: portfolioBoatImg,
+    projectName: "Boat Booking Platform",
+    projectLink: "",
+  },
+];
+
+export const workStats = [
+  {
+    icon: <EmojiEventsIcon />,
+    statName: "PROJECTS DELIVERED",
+    statNumber: "+50",
+  },
+  { icon: <BadgeIcon />, statName: "EMPLOYEES ON BOARD", statNumber: "+50" },
+  { icon: <DiamondIcon />, statName: "YEARS ON THE MARKET", statNumber: "+5" },
+  { icon: <PersonIcon />, statName: "ACTIVE USERS OF OUR APPS", statNumber: "+1M" },
+  { icon: <WebhookIcon />, statName: "CONTINENTS WITH OUR APPS", statNumber: "6" },
+  { icon: <GradeIcon />, statName: "CLUTCH RATING", statNumber: "4.7" },
 ];
