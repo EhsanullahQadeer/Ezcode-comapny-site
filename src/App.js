@@ -30,7 +30,13 @@ function App() {
   }, []);
 
   const lenis = new Lenis({
-    lerp: 0.1,
+    // lerp: 0.07,
+    easing: (x) => {
+      return Math.sin((x * Math.PI) / 2);
+    },
+    duration: 1.2,
+    smoothTouch: true,
+    syncTouch: true,
   });
 
   function raf(time) {
@@ -45,8 +51,7 @@ function App() {
   useEffect(() => {
     window.scrollTo(0, 0);
     const lenis = new Lenis({
-      // gestureOrientation: 'both',
-      smoothWheel: true,
+      duration: 1.2,
       smoothTouch: true,
       syncTouch: true,
     });
