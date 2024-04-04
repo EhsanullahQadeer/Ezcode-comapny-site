@@ -47,7 +47,7 @@ function App() {
     const lenis = new Lenis({
       // gestureOrientation: 'both',
       smoothWheel: true,
-      // smoothTouch: true,
+      smoothTouch: true,
       syncTouch: true,
     });
     window.lenis = lenis;
