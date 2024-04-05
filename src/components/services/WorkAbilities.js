@@ -30,7 +30,7 @@ export const WorkAbilities = () => {
   ];
   return (
     <>
-      <div className="bg-royal-blue my-20">
+      <div className="bg-royal-blue my-20 overflow-hidden">
         <div className="container-full container mx-auto sm:px-16 px-6">
           <div className="flex flex-col lg:flex-row gap-8 py-6">
             <div className="order-2 lg:order-1 lg:w-1/2">

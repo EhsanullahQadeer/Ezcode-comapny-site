@@ -3,20 +3,20 @@ import { services } from "../../constant";
 import { Link } from "react-router-dom";
 
 export const ServicesSection = () => {
-  useEffect(() => {
-    const handleScroll = () => {
-      const parallax = document.getElementById("parallax");
-      if (parallax) {
-        const scrollPosition = window.scrollY;
-        parallax.style.backgroundPositionY = -scrollPosition * 0.5 + "px";
-      }
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const parallax = document.getElementById("parallax");
+  //     if (parallax) {
+  //       const scrollPosition = window.scrollY;
+  //       parallax.style.backgroundPositionY = -scrollPosition * 0.5 + "px";
+  //     }
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
   return (
     <>

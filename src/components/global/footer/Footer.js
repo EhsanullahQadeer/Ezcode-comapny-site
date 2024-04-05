@@ -7,7 +7,9 @@ export const Footer = () => {
       <section className="footer-parent-wrapper bg-dark-blue">
         <div className="flex flex-col">
           <div className="flex flex-col">
-            <h2 className="text-vivid-blue section-heading font-bold p-4">FOLLOW US</h2>
+            <h2 className="text-vivid-blue section-heading font-bold p-4">
+              FOLLOW US
+            </h2>
 
             <ul className="hero-heading-3">
               <li className="social-links">
@@ -28,14 +30,18 @@ export const Footer = () => {
             </ul>
           </div>
 
-          <div className="h-svh flex flex-col items-center justify-center container mx-auto sm:px-16 px-6 relative">
-            <h2 className="text-32 md:text-48 lg:text-72 text-sky-blue font-bold">HAVE AN IDEA?</h2>
+          <div className="h-svh flex flex-col items-center justify-center relative">
+            <h2 className="text-32 md:text-48 lg:text-72 text-sky-blue font-bold">
+              HAVE AN IDEA?
+            </h2>
 
             <button className="contact-button">
-              <h2 className="text-32 md:text-48 lg:text-72 font-bold">TELL US</h2>
+              <h2 className="text-32 md:text-48 lg:text-72 font-bold">
+                TELL US
+              </h2>
             </button>
 
-            <div className="absolute left-0 bottom-2 flex flex-row gap-4">
+            <div className="absolute left-0 bottom-2 flex flex-row gap-4 px-4">
               <span>
                 <Link to="" className="footer-terms">
                   TERMS AND CONDITIONS

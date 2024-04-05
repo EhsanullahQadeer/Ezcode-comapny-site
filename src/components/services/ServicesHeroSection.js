@@ -6,14 +6,13 @@ import heroSectionImg from "../../assets/images/services/hero-section-bg.svg"
 export const ServicesHeroSection = () => {
   return (
     <>
-      <div className="services-hero-section-parent container mx-auto sm:px-16 px-6 flex flex-col lg:flex-row items-center">
-        <div data-aos="fade-left" class="lg:order-2 order-1">
+      <div className="services-hero-section-parent container mx-auto sm:px-16 px-6 flex flex-col lg:flex-row items-center justify-center overflow-hidden">
+        <div data-aos="fade-left" class="lg:order-2 order-1 w-full">
           <img
             src={heroSectionImg}
             alt="Software development services​ provider title image"
             width="auto"
             height="auto"
-            loading="eager"
           />
         </div>
         <div class="lg:order-1 order-2">
@@ -31,7 +30,7 @@ export const ServicesHeroSection = () => {
               data-aos="fade-up"
               className="pt-5 lg:pr-16 mb-4 text-14 text-slate-blue-gray"
             >
-              CrustLab provides you with a number of software development
+              Ezkode provides you with a number of software development
               services; web development, mobile apps development, product
               design, maintenance are just the start of what we can offer.
               Contact us and get to know our software development services

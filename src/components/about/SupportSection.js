@@ -9,7 +9,7 @@ export const SupportSection = () => {
         <div className="container px-6 lg:px-0">
           <div className="flex flex-col lg:flex-row md:pt-6 lg:pt-10 xl:pt-32">
             <div className="order-2 lg:order-1 relative z-10 w-full lg:pr-10 xl:pr-16 2xl:pr-24 2xl:pl-16 flex-1 content-section">
-              <h2 className="mb-6 text-3xl 2xl:text-4xl text-medium-blue font-bold leading-tight">
+              <h2 className="mb-6 section-heading text-medium-blue font-bold leading-tight">
                 Agile <br /> Staffing
               </h2>
 

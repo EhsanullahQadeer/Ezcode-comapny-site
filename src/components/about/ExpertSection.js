@@ -13,7 +13,7 @@ export const ExpertSection = () => {
               <img src={expertiseImg} />
             </div>
             <div className="relative z-10 w-full lg:px-10 lg:pl-10 xl:px-10 2xl:pr-24 2xl:pl-16 content-section">
-              <h2 className="mb-6 text-3xl 2xl:text-4xl text-medium-blue font-bold leading-tight">
+              <h2 className="mb-6 section-heading text-medium-blue font-bold leading-tight">
                 Expertise at Ezkode
               </h2>
 

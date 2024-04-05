@@ -16,7 +16,7 @@ export const AboutCompany = ({ aboutRef }) => {
               <img src={aboutImg} />
             </div>
             <div class="w-full lg:px-10 lg:pl-10 lg:pr-0 xl:pr-16 2xl:pr-24 2xl:pl-16 content-section">
-              <h2 class="mb-6 text-3xl 2xl:text-4xl text-medium-blue font-bold leading-tight">
+              <h2 class="mb-6 section-heading text-medium-blue font-bold leading-tight">
                 About <br /> Ezkode
               </h2>
 

@@ -83,7 +83,7 @@ export const AllMembers = ({ allMembersRef }) => {
               </div>
             </div>
             <div class="w-full md:w-6/12 2xl:w-5/12 md:pl-8 2xl:pl-0">
-              <h2 class="mb-8 text-3xl 2xl:text-4xl text-medium-blue font-bold 2xl:leading-snug flex flex-col gap-1">
+              <h2 class="mb-8 section-heading text-medium-blue font-bold 2xl:leading-snug flex flex-col gap-1">
                 {/* Our core team */}
                 Meet the leadership team
                 <span class="px-4 py-1 -ml-4 w-max bg-dodger-blue text-white rounded-md">
