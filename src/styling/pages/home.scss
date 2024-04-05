@@ -2,7 +2,11 @@
   .hero-section {
     height: 350svh;
     .hero-section-box {
-      top: 50%;
+      top: 50svh;
+      transform: translateY(-50%);
+      @include lg {
+        top: 50%;
+      }
     }
   }
 
@@ -69,7 +73,7 @@
       transform: translateY(-50%);
       @include lg {
         top: 50%;
-      }  
+      }
     }
     .about-box {
       max-width: max-content;

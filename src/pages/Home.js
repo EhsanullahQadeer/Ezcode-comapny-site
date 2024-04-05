@@ -14,12 +14,9 @@ export const Home = () => {
   return (
     <>
       <div className="home-parent-wrapper w-full">
-        <div
-          ref={heroSectionRef}
-          className="hero-section container mx-auto sm:px-16 px-6 relative"
-        >
-          <div className="hero-section-box sticky flex flex-col justify-center -translate-y-2/4">
-            <div className="relative max-w-fit left-1/2 -translate-x-2/4">
+        <div ref={heroSectionRef} className="hero-section relative">
+          <div className="hero-section-box sticky flex flex-col justify-center">
+            <div className="relative  sm:max-w-fit left-1/2 -translate-x-2/4 ">
               <AnimateText sectionRef={heroSectionRef} />
 
               <ScrollerLogo sectionRef={heroSectionRef} />

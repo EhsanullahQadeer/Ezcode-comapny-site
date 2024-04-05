@@ -11,13 +11,16 @@ export const ScrollerLogo = ({ sectionRef }) => {
   const middleRef = useRef(null);
   const bottomRef = useRef(null);
   const [translateYValue, setTranslateYValue] = useState("220px");
+  const [XValue, setXValue] = useState("-300vw");
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 768) {
         setTranslateYValue("150px");
+        setXValue("-500svw")
       } else {
         setTranslateYValue("220px");
+        setXValue("-300vw")
       }
     };
 
@@ -61,7 +64,7 @@ export const ScrollerLogo = ({ sectionRef }) => {
       },
     });
 
-    gsap.set(middleRef.current, { x: "-300vw" });
+    gsap.set(middleRef.current, { x: `${XValue}` });
 
     middleTl.to(middleRef.current, {
       x: "0",
@@ -96,11 +99,9 @@ export const ScrollerLogo = ({ sectionRef }) => {
 
   return (
     <>
-      <div>
+      <div className="flex justify-center">
         <svg
-          className="overflow-visible"
-          width="100%"
-          height="100%"
+          className="overflow-visible w-1/2 h-1/2 sm:w-full sm:h-full"
           viewBox="0 0 1000 1000"
         >
           <motion.path

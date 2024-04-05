@@ -55,7 +55,7 @@ const AnimateText = ({ sectionRef }) => {
   }, [sectionRef]);
 
   return (
-    <div className="absolute top-1/2 left-2/4 -translate-y-1/2 -translate-x-1/2">
+    <div className="absolute top-1/2 left-2/4 -translate-y-1/2 -translate-x-1/2 overflow-x-hidden w-svw">
       <h3
         ref={textRef}
         className="text-medium-blue hero-heading font-bold text-center whitespace-nowrap"
