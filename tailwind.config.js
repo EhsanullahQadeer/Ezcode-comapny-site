@@ -35,6 +35,7 @@ module.exports = {
       },
       fontSize: {
         // Define fontSizes here
+        132: "132px",
         92: "92px",
         82: "82px",
         72: "72px",

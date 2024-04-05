@@ -7,9 +7,9 @@ export const Footer = () => {
       <section className="footer-parent-wrapper bg-dark-blue">
         <div className="flex flex-col">
           <div className="flex flex-col">
-            <h2 className="text-vivid-blue text-36 font-bold p-4">FOLLOW US</h2>
+            <h2 className="text-vivid-blue section-heading font-bold p-4">FOLLOW US</h2>
 
-            <ul>
+            <ul className="hero-heading-3">
               <li className="social-links">
                 <a href=""> INSTAGRAM </a>
               </li>
@@ -29,10 +29,10 @@ export const Footer = () => {
           </div>
 
           <div className="h-svh flex flex-col items-center justify-center container mx-auto sm:px-16 px-6 relative">
-            <h2 className="text-72 text-sky-blue font-bold">HAVE AN IDEA?</h2>
+            <h2 className="text-32 md:text-48 lg:text-72 text-sky-blue font-bold">HAVE AN IDEA?</h2>
 
             <button className="contact-button">
-              <h2 className="text-72 font-bold">TELL US</h2>
+              <h2 className="text-32 md:text-48 lg:text-72 font-bold">TELL US</h2>
             </button>
 
             <div className="absolute left-0 bottom-2 flex flex-row gap-4">

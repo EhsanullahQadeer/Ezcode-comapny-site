@@ -67,7 +67,7 @@ export default function ZoomElement({ headingRef }) {
             className={`${cn(
               "enter",
               "h3 vh"
-            )} text-medium-blue text-82 font-bold text-center`}
+            )} text-medium-blue text-18 sm:text-32 md:48 lg:text-82 2xl:text-132 font-bold text-center`}
           >
             WHAT WE DO?
           </h2>

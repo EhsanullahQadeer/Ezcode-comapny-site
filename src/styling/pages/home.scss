@@ -32,23 +32,50 @@
   }
 
   .services-section-parent-wrapper {
+    height: 400svh;
+
     .services-text {
       margin-top: -15px;
     }
+
     .services-box {
-      max-width: 600px;
+      max-width: 100%;
+      @include lg {
+        max-width: 600px;
+      }
+    }
+
+    #services-section {
+      position: sticky;
+      top: 74px;
+      @include lg {
+        top: 50%;
+        transform: translateY(-50%);
+      }
     }
     .content-box {
-      max-width: 50%;
+      max-width: 100%;
+      z-index: 10;
+      @include lg {
+        max-width: 50%;
+      }
     }
   }
 
   .about-section-parent-wrapper {
+    .box-wrapper {
+      position: sticky;
+      top: 50svh;
+      transform: translateY(-50%);
+      @include lg {
+        top: 50%;
+      }  
+    }
     .about-box {
-      max-width: 60%;
+      max-width: max-content;
 
-      @include below-lg {
-        max-width: max-content;
+      @include lg {
+        max-width: 60%;
       }
     }
   }

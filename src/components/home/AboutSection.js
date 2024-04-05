@@ -13,11 +13,11 @@ export const AboutSection = () => {
         style={{ height: "200svh" }}
         className="about-section-parent-wrapper w-full container mx-auto sm:px-16 px-6 relative"
       >
-        <div className="sticky top-2/4 -translate-y-2/4">
+        <div className="box-wrapper">
           <div className="about-box overflow-hidden">
             <h2
               data-aos="fade-down-left"
-              className="text-medium-blue text-36 font-bold overflow-hidden"
+              className="text-medium-blue section-heading font-bold overflow-hidden"
             >
               WHY EZ KODE?
             </h2>

@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 import { gsap } from "gsap";
@@ -10,6 +10,23 @@ export const ScrollerLogo = ({ sectionRef }) => {
   const topRef = useRef(null);
   const middleRef = useRef(null);
   const bottomRef = useRef(null);
+  const [translateYValue, setTranslateYValue] = useState("220px");
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setTranslateYValue("150px");
+      } else {
+        setTranslateYValue("220px");
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const topTl = gsap.timeline({
@@ -23,7 +40,7 @@ export const ScrollerLogo = ({ sectionRef }) => {
 
     gsap.set(topRef.current, {
       rotate: "-180deg",
-      translateY: "-220px",
+      translateY: `-${translateYValue}`,
       transformOrigin: "center center",
     });
 
@@ -44,7 +61,7 @@ export const ScrollerLogo = ({ sectionRef }) => {
       },
     });
 
-    gsap.set(middleRef.current, { x: "-600%" });
+    gsap.set(middleRef.current, { x: "-300vw" });
 
     middleTl.to(middleRef.current, {
       x: "0",
@@ -64,7 +81,7 @@ export const ScrollerLogo = ({ sectionRef }) => {
 
     gsap.set(bottomRef.current, {
       rotate: "180",
-      translateY: "220px",
+      translateY: `${translateYValue}`,
       transformOrigin: "center center",
     });
 
@@ -75,7 +92,7 @@ export const ScrollerLogo = ({ sectionRef }) => {
       duration: 5,
       ease: "power1.out",
     });
-  }, []);
+  }, [translateYValue]);
 
   return (
     <>

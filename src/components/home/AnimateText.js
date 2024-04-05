@@ -58,7 +58,7 @@ const AnimateText = ({ sectionRef }) => {
     <div className="absolute top-1/2 left-2/4 -translate-y-1/2 -translate-x-1/2">
       <h3
         ref={textRef}
-        className="text-medium-blue text-48 font-bold text-center whitespace-nowrap"
+        className="text-medium-blue hero-heading font-bold text-center whitespace-nowrap"
       >
         ELEVATE YOUR DIGITAL GAME!
       </h3>

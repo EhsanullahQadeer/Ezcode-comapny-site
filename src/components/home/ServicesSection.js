@@ -71,10 +71,10 @@ export const ServicesSection = () => {
         )}
         <div
           id="services-section"
-          className="flex flex-col lg:flex-row justify-between items-center gap-10 sticky top-2/4 -translate-y-2/4"
+          className="flex flex-col lg:flex-row justify-between items-center gap-10"
         >
           <div className="content-box">
-            <div className="text-medium-blue text-36 font-bold flex flex-col overflow-hidden">
+            <div className="text-medium-blue section-heading font-bold flex flex-col overflow-hidden">
               <span data-aos="fade-down">OUR</span>
 
               <span
