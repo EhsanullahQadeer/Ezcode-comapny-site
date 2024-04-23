@@ -9,8 +9,7 @@ const projectsData = [
 ];
 export const ProjectSection = () => {
   return (
-    <>
-      <div className="project-section-parent-wrapper w-full container mx-auto sm:px-16 px-6 pb-20">
+      <div data-aos="fade-up" className="project-section-parent-wrapper w-full container mx-auto sm:px-16 px-6 pb-20">
         <div
           data-aos="fade-up"
           className="text-medium-blue section-heading font-bold flex flex-col py-10"
@@ -26,20 +25,21 @@ export const ProjectSection = () => {
             return (
               <div
                 data-aos="fade-up"
-                key={data.title + idx}
+                key={"projet-wrapp" + idx}
                 className="flex flex-col gap-2 items-center"
               >
                 <div style={{ width: "100%", position: "relative" }}>
                   <div className="img-box">
-                    <img src={imgSrc} alt="projectImg" />
+                    <img hr src={imgSrc} alt="projectImg" />
                   </div>
                 </div>
-                <h3 className="text-medium-blue hero-heading-3 font-bold ">{title}</h3>
+                <h3 className="text-medium-blue hero-heading-3 font-bold ">
+                  {title}
+                </h3>
               </div>
             );
           })}
         </div>
       </div>
-    </>
   );
 };

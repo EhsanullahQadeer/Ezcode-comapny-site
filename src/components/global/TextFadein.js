@@ -17,7 +17,7 @@ export const TextFadeIn = ({ text, sectionRef, animation, delay }) => {
       scrollTrigger: {
         trigger: sectionRef.current,
         start: "top bottom",
-        end: "bottom 150%",
+        end: "bottom 100%",
         scrub: true,
       },
     });

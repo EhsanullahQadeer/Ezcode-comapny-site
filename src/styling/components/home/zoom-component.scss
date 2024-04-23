@@ -1,7 +1,6 @@
 .solution {
   position: relative;
   height: 500vh;
-  // background-color: red;
   @include desktop {
     height: 500vh;
   }
@@ -10,17 +9,6 @@
     position: sticky;
     top: 0;
     overflow: hidden;
-
-    // &::after {
-    //   content: "";
-    //   background-color: red;
-    //   position: absolute;
-    //   height: 100%;
-    //   width: 100%;
-    //   left: 50%;
-    //   transform: translateX(-50%) scaleX(var(--progress2));
-    //   top: 0;
-    // }
 
     @include desktop {
       height: 100vh;

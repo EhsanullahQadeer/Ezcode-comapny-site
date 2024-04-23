@@ -12,9 +12,14 @@ import { useLocation } from "react-router-dom";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
-
+  const [lenis] = useStore((state) => [state.lenis]);
   useEffect(() => {
-    window.scrollTo(0, 0);
+
+    if (lenis) {
+      lenis?.scrollTo(0, {
+        immediate: true,
+      });
+    }
   }, [pathname]);
 
   return null;
@@ -23,37 +28,26 @@ function ScrollToTop() {
 function App() {
   useEffect(() => {
     AOS.init({
-      duration: 1000,
+      duration: 800,
       once: false,
       mirror: true,
     });
   }, []);
 
-  const lenis = new Lenis({
-    // lerp: 0.07,
-    easing: (x) => {
-      return Math.sin((x * Math.PI) / 2);
-    },
-    duration: 1.2,
-    smoothTouch: true,
-    syncTouch: true,
-  });
-
-  function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-  }
-
-  requestAnimationFrame(raf);
-
   const [setLenis] = useStore((state) => [state.setLenis]);
-
   useEffect(() => {
+    window.history.scrollRestoration = 'manual'
     window.scrollTo(0, 0);
     const lenis = new Lenis({
-      duration: 1.2,
+      easing: (x) => {
+        return Math.sin((x * Math.PI) / 2);
+      },
+      duration: 0.8,
       smoothTouch: true,
       syncTouch: true,
+    });
+    lenis?.scrollTo(0, {
+      immediate: true,
     });
     window.lenis = lenis;
     setLenis(lenis);

@@ -9,9 +9,9 @@
     }
     .item-wrapper {
       .img-wrapper {
-        box-shadow: 0 8px 12px 0 rgba(155, 167, 188, 0.37);
+        box-shadow: 0 8px 12px 0 var(--hazy-slate);
         @include xl {
-          box-shadow: 0 10px 20px 0 rgba(155, 167, 188, 0.37);
+          box-shadow: 0 10px 20px 0 var(--hazy-slate);
         }
 
         .carousel-img {
